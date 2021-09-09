@@ -1,0 +1,69 @@
+body {
+  background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/96/18/wmX593.jpg");
+}
+
+.myCard {
+  display: block;
+  align-self: center;
+  margin: 20px;
+  padding: 50px;
+  text-align: center;
+
+  position: absolute;
+  top: 20%;
+  /* left: 5%; */
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: rgb(248, 248, 248);
+}
+.logo {
+  width: 250px;
+  height: 80px;
+}
+.product-img {
+  width: 200px;
+  height: 200px;
+}
+#product-card {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: rgb(248, 248, 248);
+  max-width: 400px;
+  max-height: 900px;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+}
+
+.title {
+  color: rgb(248, 247, 246);
+  margin: 10px;
+}
+#placeOrder {
+  width: 300px;
+  height: 50px;
+}
+.card {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.title-success {
+  color: rgb(54, 165, 54);
+}
+
+.card-text {
+  word-wrap: normal;
+  text-overflow: clip;
+}
