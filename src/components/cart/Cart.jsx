@@ -7,7 +7,7 @@ class Cart extends Component
     render() {
 
         let total = 0;
-        
+        console.log(this.props.cart);
         this.props.cart.map(item => total += item.product.price * item.quantity);
         if(this.props.cart.length === 0) return <p className='title'>Cart is empty!</p>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
  const Product = (props) =>{
-     const [state,setState] = useState({ inCart : props.inCart});
+     const [state,setState] = useState({ inCart : props.inCart}); //to define status of products
      
     
      const addToCart = (e)=>{
@@ -31,5 +31,5 @@ import React, { useState } from 'react';
     );
 
 
-}//end og component
+}//end of component
 export default Product;

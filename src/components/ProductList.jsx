@@ -1,5 +1,3 @@
-import React from  'react';
-// import ProductNavbar from './ProductNavbar';
 import Product from './Product';
 import {connect} from 'react-redux';
 import { addToCart } from '../store/actions/cartActions';
@@ -12,7 +10,6 @@ const ProductList = (props) =>
     }
     return(
         <div>
-            {/* <ProductNavbar/> */}
             <div className="row">
                 {
                     props.products.map(product=> <Product product={product} addToCart={addToCart} inCart={props.cart.length>0 && props.cart.filter(e=> e.product.skuId=== product.skuId).length>0} key={product.skuId}/>)

@@ -24,7 +24,6 @@ class Item extends Component {
 
         if(e.target.value > this.props.item.product.amount) {
             alert("You have exceeded the available items of this product!");
-
             return;
         }
 
