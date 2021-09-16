@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/actions/cartActions';
+import { ProductProps} from './Types.type';
 
 
- const Product = (props) =>{
-     const [state,setState] = useState({ inCart : props.inCart}); //to define status of products
+ const Product = (props: ProductProps) =>{
      
-    
-     const addToCart = (e)=>{
-        e.preventDefault();
-        props.addToCart(props.product)
-        setState({inCart:true})
-    }
+    const [state,setState] = useState({ inCart : props.inCart}); //to define status of products
     const product = props.product;
-//    console.log(product);
+    const dispatch = useDispatch();
+    const add = () => {
+        dispatch(addToCart(product));
+        setState({inCart:true});
+    }
     return(
         <div>
                 <div className="card" id="product-card" key={product.skuId}>
@@ -23,13 +24,12 @@ import React, { useState } from 'react';
                     <div className="card-body">{product.desc}</div>
                     <h5><strong className='title-success'>Rs. {product.price}</strong></h5>
                     <hr/>       
-                    {state.inCart?(<span className="btn btn-success">Added to Cart</span>):(<button className="btn btn-dark" onClick={addToCart}>Add to Cart</button>)}    
+        
+                    {state.inCart?(<span className="btn btn-success">Added to Cart</span>):(<button className="btn btn-dark" onClick={add}>Add to Cart</button>)}    
                     
                 </div>
-            <br/>
+             <br/>
         </div>
     );
-
-
-}//end of component
+}
 export default Product;

@@ -1,4 +1,4 @@
-export const addToCart = (product) => {
+export const addToCart = (product:Object) => {
 
     return {
         type: 'ADD_TO_CART',
@@ -9,7 +9,7 @@ export const addToCart = (product) => {
     }
 };
 
-export const removeFromCart = (productId) => {
+export const removeFromCart = (productId:Number) => {
 
     return {
         type: 'REMOVE_FROM_CART',
@@ -19,7 +19,7 @@ export const removeFromCart = (productId) => {
     }
 };
 
-export const updateCartQuantity = (productId, quantity) => {
+export const updateCartQuantity = (productId:Number, quantity:Number) => {
 
   return {
       type: 'UPDATE_CART_QUANTITY',

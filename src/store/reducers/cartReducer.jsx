@@ -1,26 +1,30 @@
+
 const initialState = {
   cart: []
 };
 
 const cartReducer = (state = initialState, action) => {
 
-    let cart = state.cart;
-
+    let cart = state.cart
+    let newVal = cart; 
+    // {console.log(action)}
     switch(action.type) {
 
         case 'ADD_TO_CART':
 
-            cart.push(action.payload);
-
+            newVal.push(action.payload);
             return {
                 ...state,
-                cart: cart
+                cart: newVal
             };
+
         case 'UPDATE_CART_QUANTITY':
 
-            let item = cart.find(item => item.product.skuId === action.payload.productId);
+       
+       
+            let item = cart.find((item) => item.product.skuId === action.payload.productId);
 
-            let newCart = cart.filter(item => item.product.skuId !== action.payload.productId);
+            let newCart = cart.filter((item) => item.product.skuId !== action.payload.productId);
 
             item.quantity = action.payload.quantity;
 
@@ -34,11 +38,13 @@ const cartReducer = (state = initialState, action) => {
         case 'REMOVE_FROM_CART':
             return {
                 ...state,
-                cart: cart.filter(item => item.product.skuId !== action.payload.productId)
+                cart: cart.filter((item) => item.product.skuId !== action.payload.productId)
             };
+
+            
         default:
             return state;
     }
 };
 
-export default cartReducer;
+export default cartReducer; 

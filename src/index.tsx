@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import Home from './components/Home';
 import Cart from './components/cart/Cart';
 import {BrowserRouter,Route,Redirect,Switch} from 'react-router-dom';
-
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './store/reducers/rootReducer'
 import ProductList from './components/ProductList';
+import PageNotFound from  './components/PageNotFound';
 
 const store = createStore(rootReducer);
 
@@ -26,7 +26,7 @@ ReactDOM.render(
         <Route path="/Home" component={Home} />
         <Route path="/Cart" component={Cart} />
         <Route path="/ProductList" component={ProductList} />
-
+        <Route component = {PageNotFound} />
       </Switch>
       </Provider>
 

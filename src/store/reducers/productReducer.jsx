@@ -35,7 +35,7 @@ const initialState = {
     }]
 };
    
-const productReducer = (state=initialState,action)=>{
+const productReducer = (state=initialState)=>{
     return state;
 };
 
