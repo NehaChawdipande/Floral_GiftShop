@@ -1,31 +1,29 @@
-export const addToCart = (product:Object) => {
+import { ProductType } from "../../components/Types.type";
+
+export const addToCart = (product:ProductType) => {
+    return {
+       type: 'ADD',
+    product: product,
+  quantity:1
+        }
+    
+};
+
+export const removeFromCart = (product:ProductType) => {
 
     return {
-        type: 'ADD_TO_CART',
-        payload: {
-            product,
-            quantity: 1
-        }
+        type: 'REMOVE',
+        product:product
+    
     }
 };
 
-export const removeFromCart = (productId:Number) => {
+export const updateCartQuantity = (product:ProductType, quantity:Number) => {
 
-    return {
-        type: 'REMOVE_FROM_CART',
-        payload: {
-            productId: productId
-        }
-    }
-};
-
-export const updateCartQuantity = (productId:Number, quantity:Number) => {
-
-  return {
-      type: 'UPDATE_CART_QUANTITY',
-      payload: {
-          productId,
+     return {
+      type: 'UPDATE',
+          product:product,
           quantity: quantity
-      }
+      
   }
 };

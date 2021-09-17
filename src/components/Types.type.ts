@@ -18,5 +18,6 @@ export type itemProps = {
 };
 
 export type CartType= {
-    cart: []
+    cart: ProductType[] 
 }
+
