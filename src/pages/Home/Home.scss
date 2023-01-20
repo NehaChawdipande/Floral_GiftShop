@@ -1,0 +1,132 @@
+// body {
+//   background: url("https://img.wallpapersafari.com/desktop/1920/1080/96/18/wmX593.jpg")
+//     no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+.home {
+  display: block;
+}
+body {
+  font-family: ui-serif;
+}
+.banner {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}
+.overlay {
+  @extend .banner;
+  background: none;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#siteDesc {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.viewBtn {
+  color: #fff;
+  border-radius: 40px;
+  padding: 1.5rem;
+  background-color: #ff3d67;
+  border: none;
+  &:hover {
+    scale: 1.2;
+    transition: all ease-out 0.7s;
+    background-color: #ee2852;
+  }
+  &:focus-visible,
+  &:focus {
+    outline: none;
+  }
+}
+.viewBtnSuccess {
+  color: #343434;
+  border-radius: 40px;
+  padding: 1.5rem;
+  background-color: #8be13a;
+  border: none;
+  &:focus-visible,
+  &:focus {
+    outline: none;
+  }
+}
+.myCard {
+  display: block;
+  align-self: center;
+  margin: 20px;
+  padding: 50px;
+  text-align: center;
+  color: #ececec;
+  top: 20%;
+  /* left: 5%; */
+  // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 73%);
+  transition: 0.3s;
+  // background-color: #f8f9faf2;
+  border-radius: 40px;
+  hr {
+    border-top: 1px solid #ececec;
+  }
+}
+.logo {
+  width: 250px;
+  height: 80px;
+  @media (max-width: 375px) {
+    width: 194px;
+    height: 76px;
+  }
+}
+.product-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+#product-card {
+  display: inline-block;
+  border-radius: 24px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  background-color: rgb(248, 248, 248);
+  max-width: 400px;
+  max-height: 900px;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+}
+
+.title {
+  color: #343434;
+  margin: 10px;
+}
+#placeOrder {
+  width: 300px;
+  height: 50px;
+}
+.card {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.title-success {
+  color: rgb(54, 165, 54);
+}
+
+.card-text {
+  word-wrap: normal;
+  text-overflow: clip;
+}

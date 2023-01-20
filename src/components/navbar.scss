@@ -1,0 +1,23 @@
+.myNavButton {
+//   margin: 12px;/
+  display: flex;
+  justify-content: end;
+  &:focus-visible,
+  &:focus {
+    outline: 1px solid #343434;
+  }
+}
+
+.navMenuOpen {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  li {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #343434;
+  }
+  a {
+    color: #343434;
+  }
+}
