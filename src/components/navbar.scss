@@ -1,5 +1,5 @@
 .myNavButton {
-//   margin: 12px;/
+  //   margin: 12px;/
   display: flex;
   justify-content: end;
   &:focus-visible,
@@ -7,7 +7,9 @@
     outline: 1px solid #343434;
   }
 }
-
+.nav-item {
+  margin: 0 12px;
+}
 .navMenuOpen {
   display: grid;
   width: 100vw;

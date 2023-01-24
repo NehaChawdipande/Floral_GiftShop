@@ -9,7 +9,10 @@ const ProductList = () => {
   const cart = useSelector((state: CartType) => state.cart); //reducer values
   return (
     <div>
-      <div className="row" style={{ justifyContent: "space-evenly" }}>
+      <div
+        className="row"
+        style={{ justifyContent: "space-evenly", padding: "24px", margin: 0 }}
+      >
         {products.map((product: ProductType) => (
           <Product
             product={product}

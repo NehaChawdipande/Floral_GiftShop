@@ -21,7 +21,7 @@ export default function Navbar() {
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link" to="/" onClick={() => setOpen(false)}>
-            Home
+            <h3>Home</h3>
           </Link>
         </li>
         <li className="nav-item">
@@ -30,12 +30,12 @@ export default function Navbar() {
             to="/ProductList"
             onClick={() => setOpen(false)}
           >
-            Products
+            <h3>Products</h3>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/Cart" onClick={() => setOpen(false)}>
-            Cart
+            <h3>Cart</h3>
           </Link>
         </li>
       </ul>
@@ -61,17 +61,17 @@ export default function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link" to="/">
-              Home
+              <h4>Home</h4>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/ProductList">
-              Products
+              <h4>Products</h4>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/Cart">
-              Cart
+              <h4>Cart</h4>
             </Link>
           </li>
         </ul>

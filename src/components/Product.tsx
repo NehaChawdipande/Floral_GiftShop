@@ -26,9 +26,10 @@ const Product = (props: ProductProps) => {
           <strong>{product.ProductName}</strong>
         </h5>
         <div className="card-body">{product.desc}</div>
-        <h5>
-          <strong className="title-success">Rs. {product.price}</strong>
-        </h5>
+        <div className="cardPrice">
+          <h3>₹ {product.price} /-</h3>
+        </div>
+
         <hr />
 
         {state.inCart ? (
